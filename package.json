@@ -1,13 +1,16 @@
 {
-  "name": "next-contentlayer",
+  "name": "bankusy",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://bankusy.github.io/",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "preview": "next build && next start",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "predeploy": "npm run build",
+    "deploy": "touch out/.nojekyll && gh-pages -d out --dotfiles"
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.9",
@@ -19,6 +22,7 @@
     "contentlayer": "^0.3.2",
     "eslint": "8.39.0",
     "eslint-config-next": "13.3.1",
+    "gh-pages": "^6.3.0",
     "next": "13.4.1",
     "next-contentlayer": "^0.3.2",
     "next-themes": "^0.2.1",
